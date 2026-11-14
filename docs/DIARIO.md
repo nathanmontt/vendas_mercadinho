@@ -10,9 +10,9 @@ _Preencher com uma pergunta sobre os dados._
 
 ## O que identifiquei ao abrir o CSV?
 
-- Cabeçalho:
-- Delimitador:
-- Colunas numéricas:
+- Cabeçalho: ok
+- Delimitador: ok
+- Colunas numéricas: 
 - Colunas textuais:
 - Dúvidas e suspeitas:
 

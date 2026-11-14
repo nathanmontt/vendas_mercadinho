@@ -1,4 +1,4 @@
-# Projeto 02 — Análise de vendas de um mercadinho
+# Análise de vendas de um mercadinho
 
 > Operações numéricas e resumos simples  
 > Projeto de aprendizado em Python puro (biblioteca padrão), com dados fictícios e intencionalmente imperfeitos.
@@ -9,13 +9,13 @@ Um pequeno mercadinho fictício exportou seu registro de vendas. Seu papel é in
 
 ## Objetivo
 
-Construir, **por conta própria**, um programa de linha de comando que transforme os arquivos brutos em informações úteis, com critérios explícitos de tratamento de dados.
+Construir um programa de linha de comando que transforme os arquivos brutos em informações úteis, com critérios explícitos de tratamento de dados.
 
 ## Ferramentas previstas
 
-- Python 3 (biblioteca padrão; sem dependências externas).
-- Editor: VS Code ou qualquer editor de sua escolha.
-- Conhecimentos praticados: `csv.DictReader` · `int/float e normalização de vírgula` · `soma e média` · `formatação no terminal` · `condicionais`.
+- Linguagem: **Python**
+- Editor: **VS Code**
+- Conhecimentos praticados: `csv.DictReader` , `int/float e normalização de vírgula` , `soma e média` , `formatação no terminal` , `condicionais`.
 
 ## Arquivos de entrada
 
@@ -23,7 +23,6 @@ Veja os arquivos na pasta `dados/brutos/`. Leia-os como **texto CSV separado por
 
 ## Requisitos do projeto
 
-- [ ] Ler o CSV preservando os campos entre aspas corretamente.
 - [ ] Conhecer quais colunas são texto e quais deveriam ser números.
 - [ ] Identificar registros com quantidade ou preço ausente, inválido ou negativo.
 - [ ] Decidir uma regra para lidar com operações canceladas e registrar a escolha.
@@ -43,17 +42,13 @@ Veja os arquivos na pasta `dados/brutos/`. Leia-os como **texto CSV separado por
 ## Saídas esperadas
 
 - Um resumo legível no terminal.
-- Quando solicitado no roteiro, um ou mais arquivos gerados em `dados/processados/` ou `resultados/`.
 - Um registro das decisões de limpeza em `docs/DIARIO.md`.
 
 ## Estrutura
 
 ```text
-src/main.py          # implementar
+Código principal: src/main.py
 Dados brutos: dados/brutos/
-Dados tratados: dados/processados/
-Relatórios: resultados/
-Guia: docs/ROTEIRO.md
 Diário de bordo: docs/DIARIO.md
 ```
 
@@ -64,10 +59,6 @@ Diário de bordo: docs/DIARIO.md
 **Regras que escolhi:** _preencher_  
 **Resultados principais:** _preencher_  
 **O que melhoraria:** _preencher_
-
-## Próximos passos
-
-Consulte `docs/ROTEIRO.md` e avance apenas depois de conseguir explicar seu código e suas decisões.
 
 ## Nota sobre os dados
 

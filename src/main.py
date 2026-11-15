@@ -6,8 +6,10 @@ def ajuste_produto(valor):
     # produto = valor.strip()
     # pass
 
-    if valor.isalnum() and not valor.isspace():
-        return valor.strip()
+    if valor.isalnum() or "":
+        return valor.strip(";")
+    elif valor.isalnum():
+        return valor
 
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"
 
@@ -26,6 +28,6 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
         status = each_line["status"]
 
         # print(produto, end=" | ")
-        print(produto)
+        print(venda_id, produto)
 
         # print(venda_id, data, produto, categoria, quantidade, preco_unitario, forma_pagamento, status)

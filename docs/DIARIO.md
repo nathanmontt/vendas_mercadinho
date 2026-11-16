@@ -2,7 +2,7 @@
 
 ## Data de início
 
-_Preencher_
+14/11/2026
 
 ## O que eu quero descobrir?
 

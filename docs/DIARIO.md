@@ -13,8 +13,8 @@ _Preencher com uma pergunta sobre os dados._
 - Cabeçalho: ok
 - Delimitador: ok
 - Colunas numéricas: 
-- Colunas textuais:
-- Dúvidas e suspeitas:
+- Colunas textuais: possui números e strings. manter ou consertar, dependendo do método
+- Dúvidas e suspeitas: ok
 
 ## Regras que adotei
 

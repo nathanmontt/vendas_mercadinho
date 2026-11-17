@@ -1,12 +1,10 @@
 from pathlib import Path
 import csv
 import statistics as sc
+import re
 
 def ajuste_produto(valor):
-    # produto = valor.strip()
-    # pass
-
-    if valor.isspace():
+    if re.search(r"\s", valor):
         return valor
 
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"

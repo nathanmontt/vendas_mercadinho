@@ -6,9 +6,7 @@ def ajuste_produto(valor):
     # produto = valor.strip()
     # pass
 
-    if valor.isalnum() or "":
-        return valor.strip(";")
-    elif valor.isalnum():
+    if valor.isspace():
         return valor
 
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"

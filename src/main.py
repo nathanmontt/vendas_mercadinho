@@ -4,8 +4,6 @@ import statistics as sc
 import re
 
 def ajuste_produto(valor):
-    # if re.search(r"\s", valor):
-    #     return valor
     partes = re.split(
         r"\s+(?=\d+\s*(?:l|kg|g|un)\b)", valor, maxsplit=1, flags=re.I
     )
@@ -14,6 +12,12 @@ def ajuste_produto(valor):
     tamanho = partes[1].strip() if len(partes) > 1 else ""
 
     return nome, tamanho
+    # return re.sub(
+    #     r"\s*(?:;\s*)?\d+\s*(?:l|kg|g|un)\b.*$",
+    #     "",
+    #     valor,
+    #     flags=re.I
+    # ).strip()
 
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"
 
@@ -24,7 +28,6 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
         venda_id = each_line["venda_id"]
         data = each_line["data"]
         produto = ajuste_produto(each_line["produto"])
-        # produto = each_line["produto"]
         categoria = each_line["categoria"]
         quantidade = each_line["quantidade"]
         preco_unitario = each_line["preco_unitario"]

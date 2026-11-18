@@ -4,8 +4,16 @@ import statistics as sc
 import re
 
 def ajuste_produto(valor):
-    if re.search(r"\s", valor):
-        return valor
+    # if re.search(r"\s", valor):
+    #     return valor
+    partes = re.split(
+        r"\s+(?=\d+\s*(?:l|kg|g|un)\b)", valor, maxsplit=1, flags=re.I
+    )
+
+    nome = partes[0].strip().strip(";")
+    tamanho = partes[1].strip() if len(partes) > 1 else ""
+
+    return nome, tamanho
 
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"
 

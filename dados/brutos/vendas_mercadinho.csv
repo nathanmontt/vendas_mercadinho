@@ -34,7 +34,7 @@ V0032;02/08/2026;Bolacha;Mercearia;1;3,08;Pix;Concluida
 V0033;03/08/2026;Cafe 250g;Mercearia;zero;18,04;Pix;Concluida
 V0034;04/08/2026;Papel toalha;Higiene;3;9,77;Cartao;Concluida
 V0035;05/08/2026;Macarrao;Mercearia;4;4,37;pix;Concluida
-V0036;06/08/2026;Bolacha;Mercearia;8;3,59;CARTÃO;Concluida
+V0036;06/08/2026;Bolacha;Mercearia;8;-3,59;CARTÃO;Concluida
 V0037;07/08/2026;Suco uva 1L;Bebidas;2;10,33;CARTÃO;Concluida
 V0038;08/08/2026;Sabao em po;Limpeza;4;11,54;Pix;Cancelada
 V0039;09/08/2026;Papel toalha;Higiene;6;9,32;Cartao;Concluida
@@ -47,7 +47,7 @@ V0045;15/08/2026;Sabao em po;Limpeza;4;13,05;Cartao;Cancelada
 V0046;16/08/2026;Arroz 1kg;Mercearia;8;6,56;Cartao;Concluida
 V0047;17/08/2026;Cafe 250g;Mercearia;5;16,78;Dinheiro;Concluida
 V0048;18/08/2026;Arroz 1kg;Mercearia;7;6,42;pix;Concluida
-V0049;19/08/2026;Sabao em po;Limpeza;5;11,79;Cartao;Concluida
+V0049;19/08/2026;Sabao em po;Limpeza;5;-11,79;Cartao;Concluida
 V0050;20/08/2026;Detergente;Limpeza;8;2,82;pix;Concluida
 V0051;21/08/2026;Detergente;Limpeza;5;;pix;
 V0052;22/08/2026;Bolacha;Mercearia;6;2,98;Dinheiro;Concluida
@@ -70,7 +70,7 @@ V0068;07/08/2026;"Kit festa; 10 un";Festas;8;25,50;pix;Concluida
 V0069;08/08/2026;Leite UHT;Laticinios;7;5,84;Pix;cancelada
 V0070;09/08/2026;Leite UHT;Laticinios;2;4,59;CARTÃO;concluida
 V0071;10/08/2026;Arroz 1kg;Mercearia;1;7,04;CARTÃO;concluida
-V0072;11/08/2026;Papel toalha;Higiene;;7,65;Dinheiro;Concluida
+V0072;11/08/2026;Papel toalha;Higiene;;-7,65;Dinheiro;Concluida
 V0073;12/08/2026;Papel toalha;Higiene;3;8,67;Pix;ConcluIDA
 V0074;13/08/2026;Suco uva 1L;Bebidas;1;9,48;pix;Cancelada
 V0075;14/08/2026;"Kit festa; 10 un";Festas;1;27,03;CARTÃO;Concluida
@@ -85,14 +85,14 @@ V0083;22/08/2026;Bolacha;Mercearia;1;3,69;Pix;Concluida
 V0084;23/08/2026;Suco uva 1L;Bebidas;2;;Pix;Concluida
 V0085;24/08/2026;Detergente;Limpeza;2;3,10;pix;Concluida
 V0086;25/08/2026;Cafe 250g;Mercearia;2;18,44;CARTÃO;Concluida
-V0087;26/08/2026;Arroz 1kg;Mercearia;7;7,66;Dinheiro;Concluida
+V0087;26/08/2026;Arroz 1kg;Mercearia;7;-7,66;Dinheiro;Concluida
 V0088;27/08/2026;Bolacha;Mercearia;1;3,23;Pix;Concluida
 V0089;28/08/2026;Bolacha;Mercearia;1;2,91;CARTÃO;Cancelada
 V0090;29/08/2026;"Kit festa; 10 un";Festas;6;22,72;Pix;Concluida
 V0091;30/08/2026;"Kit festa; 10 un";Festas;2;24,24;Pix;Concluida
 V0092;31/08/2026;"Kit festa; 10 un";Festas;2;;pix;Concluida
 V0093;01/08/2026;Suco uva 1L;Bebidas;2;10,01;Dinheiro;Concluida
-V0094;02/08/2026;Sabao em po;Limpeza;6;13,65;Cartao;Concluida
+V0094;02/08/2026;Sabao em po;Limpeza;6;-13,65;Cartao;Concluida
 V0095;03/08/2026;Leite UHT;Laticinios;6;5,59;CARTÃO;Concluida
 V0096;04/08/2026;Sabao em po;Limpeza;3;14,02;Pix;Concluida
 V0097;05/08/2026;Leite UHT;Laticinios;;4,55;Cartao;Cancelada

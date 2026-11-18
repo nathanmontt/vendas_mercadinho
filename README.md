@@ -23,7 +23,7 @@ Veja os arquivos na pasta `dados/brutos/`. Leia-os como **texto CSV separado por
 
 ## Requisitos do projeto
 
-- [ ] Conhecer quais colunas são texto e quais deveriam ser números.
+- [x] Conhecer quais colunas são texto e quais deveriam ser números.
 - [ ] Identificar registros com quantidade ou preço ausente, inválido ou negativo.
 - [ ] Decidir uma regra para lidar com operações canceladas e registrar a escolha.
 - [ ] Calcular receita por linha utilizável e o total geral.

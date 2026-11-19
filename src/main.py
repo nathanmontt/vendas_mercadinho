@@ -11,13 +11,16 @@ def ajuste_produto(valor):
     nome = partes[0].strip().strip(";")
     tamanho = partes[1].strip() if len(partes) > 1 else ""
 
-    return nome, tamanho
+    return nome
     # return re.sub(
     #     r"\s*(?:;\s*)?\d+\s*(?:l|kg|g|un)\b.*$",
     #     "",
     #     valor,
     #     flags=re.I
     # ).strip()
+
+def preparar_categoria(valor: str) -> str:
+    return valor.strip().title()
 
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"
 
@@ -28,13 +31,13 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
         venda_id = each_line["venda_id"]
         data = each_line["data"]
         produto = ajuste_produto(each_line["produto"])
-        categoria = each_line["categoria"]
+        categoria = preparar_categoria(each_line["categoria"])
         quantidade = each_line["quantidade"]
         preco_unitario = each_line["preco_unitario"]
         forma_pagamento = each_line["forma_pagamento"]
         status = each_line["status"]
 
         # print(produto, end=" | ")
-        print(venda_id, produto)
+        print(venda_id, produto, categoria)
 
         # print(venda_id, data, produto, categoria, quantidade, preco_unitario, forma_pagamento, status)

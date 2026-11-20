@@ -31,12 +31,18 @@ def converter_valor(valor: str) -> float:
     except ValueError:
         return 0.0
 
+def preparar_forma_pagamento(valor: str) -> str:
+    return valor.strip().title()
+
+def ajuste_status(valor: str) -> str:
+    return valor.strip().title()
+
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"
 
 with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
     leitor = csv.DictReader(arq, delimiter=";")
 
-    print(f"{"ID":<5} | {"DATA":<10} | {"PRODUTO":<13} | {"CATEGORIA":<10} | {"QUANT.":<8} | {"PREÇO":<10} | |")
+    print(f"{"ID":<5} | {"DATA":<10} | {"PRODUTO":<13} | {"CATEGORIA":<10} | {"QUANT.":<8} | {"PREÇO":<10} | {"PAGAMENTO":<10} | {"STATUS"} ")
     print('-' * 100)
     for each_line in leitor:
         venda_id = each_line["venda_id"]
@@ -45,9 +51,9 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
         categoria = preparar_categoria(each_line["categoria"])
         quantidade = each_line["quantidade"] if each_line["quantidade"] else "SEM INFO"
         preco_unitario = converter_valor(each_line["preco_unitario"])
-        forma_pagamento = each_line["forma_pagamento"]
-        status = each_line["status"]
+        forma_pagamento = preparar_forma_pagamento(each_line["forma_pagamento"])
+        status = ajuste_status(each_line["status"])
 
-        print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade:8} | R${preco_unitario:>8} | ")
+        print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade:8} | R${preco_unitario:>8} | {forma_pagamento:<10} | {"SEM STATUS" if not status else status}")
 
         # print(venda_id, data, produto, categoria, quantidade, preco_unitario, forma_pagamento, status)

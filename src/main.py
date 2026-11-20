@@ -31,8 +31,7 @@ def converter_valor(valor: str) -> float:
         valor = valor.replace(".","").replace(",",".")
         valor_transformado = float(valor)
         if valor_transformado < 0:
-            print(valor_transformado)
-            return valor_transformado
+            return abs(valor_transformado)
         else:
             return valor
     except ValueError:

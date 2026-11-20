@@ -54,11 +54,10 @@ Diário de bordo: docs/DIARIO.md
 
 ## Aprendizados e resultados — preencher ao concluir
 
-**O que aprendi:** _preencher_  
-**Problemas encontrados:** _preencher_  
-**Regras que escolhi:** _preencher_  
-**Resultados principais:** _preencher_  
-**O que melhoraria:** _preencher_
+**O que aprendi:** uso mais aprimorado das funções  
+**Problemas encontrados:** formatações incorretas, tantos em _strings_ quanto em números  
+**Resultados principais:** limpesa dos daddos (_data cleasing_)
+**O que melhoraria:** exportação em pdf dos dados limpos
 
 ## Nota sobre os dados
 

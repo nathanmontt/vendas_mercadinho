@@ -6,7 +6,7 @@
 
 ## O que eu quero descobrir?
 
-_Preencher com uma pergunta sobre os dados._
+_Adicionar depois._
 
 ## O que identifiquei ao abrir o CSV?
 
@@ -16,7 +16,7 @@ _Preencher com uma pergunta sobre os dados._
 - Colunas textuais: possui números e strings. manter ou consertar, dependendo do método
 - Dúvidas e suspeitas: ok
 
-## Regras que adotei
+<!-- ## Regras que adotei
 
 | Situação encontrada | Decisão | Justificativa |
 |---|---|---|
@@ -34,4 +34,4 @@ _Preencher depois de terminar os cálculos._
 
 ## Melhorias futuras
 
-_Preencher com ideias, como separar funções, exportar, testar etc._
+_Preencher com ideias, como separar funções, exportar, testar etc._ -->

@@ -2,6 +2,7 @@ from pathlib import Path
 import csv
 import statistics as sc
 import re
+import statistics as sc
 
 def ajuste_produto(valor):
     partes = re.split(
@@ -56,4 +57,4 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
 
         print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade:8} | R${preco_unitario:>8} | {forma_pagamento:<10} | {"SEM STATUS" if not status else status}")
 
-        # print(venda_id, data, produto, categoria, quantidade, preco_unitario, forma_pagamento, status)
+    print("\nESTATÍSTICAS")

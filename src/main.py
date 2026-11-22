@@ -56,6 +56,8 @@ caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercad
 with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
     leitor = csv.DictReader(arq, delimiter=";")
 
+    teste = []
+
     print(f"{"ID":<5} | {"DATA":<10} | {"PRODUTO":<13} | {"CATEGORIA":<10} | {"QUANT.":<8} | {"PREÇO":<10} | {"PAGAMENTO":<10} | {"STATUS"} ")
     print('-' * 100)
     for each_line in leitor:
@@ -71,6 +73,12 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
 
         print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade} | R${preco_unitario:>8} | {forma_pagamento:<10} | {"SEM STATUS" if not status else status}")
         # print(type(quantidade))
+        conta = quantidade*preco_unitario
+        teste.append(conta)
 
     print("\nESTATÍSTICAS")
-    
+    receita_total_format = [f"{valor:.2f}" for valor in teste]
+    ajuste_receita_total = [float(valor) for valor in receita_total_format]
+
+    print(f"{'RECEITA TOTAL'} | {''} | {''}")
+    print(f"R$ {sum(ajuste_receita_total):.2f} {'|':>3}")

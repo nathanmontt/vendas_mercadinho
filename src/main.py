@@ -28,21 +28,22 @@ def converter_valor(valor: str) -> float:
         if valor_transformado < 0:
             return abs(valor_transformado)
         else:
-            return valor
+            return valor_transformado
     except ValueError:
         return 0.0
 
 def converter_quant(valor):
-    valor = valor.strip().title()
-    if isinstance(valor, str):
-        return int(valor)
-    elif not valor < 0:
+    valor = valor.strip().casefold()
+    if not valor:
         return 0
-    # elif not valor < 0:
-    #     return abs(valor)
 
-    # if not valor:
-    #     return 0
+    try:
+        numero = int(valor)
+        if numero < 0:
+            return abs(numero)
+        return numero
+    except ValueError:
+        return 0
 
 def preparar_forma_pagamento(valor: str) -> str:
     return valor.strip().title()

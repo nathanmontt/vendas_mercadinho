@@ -4,15 +4,11 @@
 
 14/11/2026
 
-## O que eu quero descobrir?
-
-_Adicionar depois._
-
 ## O que identifiquei ao abrir o CSV?
 
 - Cabeçalho: ok
 - Delimitador: ok
-- Colunas numéricas: 
+- Colunas numéricas: haviam alguns erros e formatações diferentes
 - Colunas textuais: possui números e strings. manter ou consertar, dependendo do método
 - Dúvidas e suspeitas: ok
 

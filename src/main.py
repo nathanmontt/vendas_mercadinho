@@ -32,6 +32,22 @@ def converter_valor(valor: str) -> float:
     except ValueError:
         return 0.0
 
+def converter_quant(valor):
+    valor = valor.strip().title()
+    # if valor:
+    #     return int(valor)
+    # elif not valor:
+    #     return int(0)
+    # elif isinstance(valor, str):
+    #     return "ajkshndasnd"
+
+    if not isinstance(valor, str):
+        return "asdasd"
+    elif valor:
+        # print(type(valor))
+        return 0
+        
+
 def preparar_forma_pagamento(valor: str) -> str:
     return valor.strip().title()
 
@@ -50,11 +66,14 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
         data = each_line["data"]
         produto = ajuste_produto(each_line["produto"])
         categoria = preparar_categoria(each_line["categoria"])
-        quantidade = each_line["quantidade"] if each_line["quantidade"] else "SEM INFO"
+        # quantidade = each_line["quantidade"] if each_line["quantidade"] else "SEM INFO"
+        quantidade = converter_quant(each_line["quantidade"])
         preco_unitario = converter_valor(each_line["preco_unitario"])
         forma_pagamento = preparar_forma_pagamento(each_line["forma_pagamento"])
         status = ajuste_status(each_line["status"])
 
-        print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade:8} | R${preco_unitario:>8} | {forma_pagamento:<10} | {"SEM STATUS" if not status else status}")
+        print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade} | R${preco_unitario:>8} | {forma_pagamento:<10} | {"SEM STATUS" if not status else status}")
+        # print(type(quantidade))g
 
     print("\nESTATÍSTICAS")
+    

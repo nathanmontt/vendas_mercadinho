@@ -34,19 +34,15 @@ def converter_valor(valor: str) -> float:
 
 def converter_quant(valor):
     valor = valor.strip().title()
-    # if valor:
-    #     return int(valor)
-    # elif not valor:
-    #     return int(0)
-    # elif isinstance(valor, str):
-    #     return "ajkshndasnd"
-
-    if not isinstance(valor, str):
-        return "asdasd"
-    elif valor:
-        # print(type(valor))
+    if isinstance(valor, str):
+        return int(valor)
+    elif not valor < 0:
         return 0
-        
+    # elif not valor < 0:
+    #     return abs(valor)
+
+    # if not valor:
+    #     return 0
 
 def preparar_forma_pagamento(valor: str) -> str:
     return valor.strip().title()
@@ -73,7 +69,7 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
         status = ajuste_status(each_line["status"])
 
         print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade} | R${preco_unitario:>8} | {forma_pagamento:<10} | {"SEM STATUS" if not status else status}")
-        # print(type(quantidade))g
+        # print(type(quantidade))
 
     print("\nESTATÍSTICAS")
     

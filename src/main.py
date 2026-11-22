@@ -5,9 +5,7 @@ import re
 import statistics as sc
 
 def ajuste_produto(valor):
-    partes = re.split(
-        r"\s+(?=\d+\s*(?:l|kg|g|un)\b)", valor, maxsplit=1, flags=re.I
-    )
+    partes = re.split(r"\s+(?=\d+\s*(?:l|kg|g|un)\b)", valor, maxsplit=1, flags=re.I)
 
     nome = partes[0].strip().strip(";")
     tamanho = partes[1].strip() if len(partes) > 1 else ""
@@ -56,7 +54,7 @@ caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercad
 with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
     leitor = csv.DictReader(arq, delimiter=";")
 
-    teste = []
+    receita_total = []
 
     print(f"{"ID":<5} | {"DATA":<10} | {"PRODUTO":<13} | {"CATEGORIA":<10} | {"QUANT.":<8} | {"PREÇO":<10} | {"PAGAMENTO":<10} | {"STATUS"} ")
     print('-' * 100)
@@ -65,20 +63,19 @@ with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
         data = each_line["data"]
         produto = ajuste_produto(each_line["produto"])
         categoria = preparar_categoria(each_line["categoria"])
-        # quantidade = each_line["quantidade"] if each_line["quantidade"] else "SEM INFO"
         quantidade = converter_quant(each_line["quantidade"])
         preco_unitario = converter_valor(each_line["preco_unitario"])
         forma_pagamento = preparar_forma_pagamento(each_line["forma_pagamento"])
         status = ajuste_status(each_line["status"])
 
         print(f"{venda_id} | {data} | {produto:<13} | {categoria:<10} | {quantidade} | R${preco_unitario:>8} | {forma_pagamento:<10} | {"SEM STATUS" if not status else status}")
-        # print(type(quantidade))
-        conta = quantidade*preco_unitario
-        teste.append(conta)
+        if status == "Concluida":
+            conta = quantidade*preco_unitario
+            receita_total.append(conta)
 
     print("\nESTATÍSTICAS")
-    receita_total_format = [f"{valor:.2f}" for valor in teste]
+    receita_total_format = [f"{valor:.2f}" for valor in receita_total]
     ajuste_receita_total = [float(valor) for valor in receita_total_format]
 
     print(f"{'RECEITA TOTAL'} | {''} | {''}")
-    print(f"R$ {sum(ajuste_receita_total):.2f} {'|':>3}")
+    print(f"R$ {sum(ajuste_receita_total):.2f} {'|':>4}")

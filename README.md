@@ -26,7 +26,7 @@ Veja os arquivos na pasta `dados/brutos/`. Leia-os como **texto CSV separado por
 - [x] Conhecer quais colunas são texto e quais deveriam ser números.
 - [x] Identificar registros com quantidade ou preço ausente, inválido ou negativo.
 - [x] Decidir uma regra para lidar com operações canceladas e registrar a escolha.
-- [ ] Calcular receita por linha utilizável e o total geral.
+- [x] Calcular receita por linha utilizável e o total geral.
 - [ ] Organizar um resumo por categoria e produto sem perder o arquivo original.
 
 ## Perguntas que a análise deve ajudar a responder

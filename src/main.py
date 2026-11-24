@@ -50,6 +50,10 @@ def ajuste_status(valor: str) -> str:
     return valor.strip().title()
 
 caminho_csv = Path(__file__).parent.parent / "dados" / "brutos" / "vendas_mercadinho.csv"
+"""
+para rastrear o maior produtos com mais vendas, posso fazer um dicionario que guarda cada produto,
+e consequentemente, cada valor, e a partir disso, procurar o maior valor e printar (key e object)
+"""
 
 with caminho_csv.open("r", encoding="utf-8-sig", newline="") as arq:
     leitor = csv.DictReader(arq, delimiter=";")
